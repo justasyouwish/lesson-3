@@ -1,205 +1,55 @@
-// --------------------------//
-// --------------------------//
-// області видимості
-// --------------------------//
-// --------------------------//
+//  -- 1 --
+// У вас є масив об’єктів fruts, і в кожному з них є name
+// Напишіть код, який перетворює їх в масив імен.
 
-// if (true) {
-//   const b = 10;
-//   console.log("Block", b);
-// }
+// const fruts = ['Apple', 'Tomat', 'Cherry', 'Orange'];
 
-// console.log("Global", b);
+// console.log(fruts);
 
-// --------------------------//
-// --------------------------//
-// Цикли
-// --------------------------//
-// --------------------------//
+//  -- 2 --
+//Виведіть парні числа від 2 до 10, використовуючи цикл for.
 
-// while
-
-// let a = 0;
-
-// while (a < 5) {
-//   a++;
-//   console.log("a", a);
-// }
-
-// let a = 0;
-
-// while (a) console.log(a--);
-
-// do while
-
-// do {
-//   console.log(a);
-//   a++;
-// } while (a < 5);
-
-//for
-
-// let a = 0;
-
-// for (; a < 3; ) {
-//   a++;
+// for (let a = 2; a < 10; a++) {
+//   if (a % 2 === 1) continue;
 //   console.log(a);
 // }
 
-// break && continue
+//  -- 3 --
+//Замініть цикл "for" на "while"
+// for (let i = 0; i < 5; i++) {
+//   console.log(`цифра ${i}!`);
+// }
 
-// let summ = 0;
+// let i = 0;
+// while (i < 5) {
+//   i++;
+//   console.log(`cyfra ${i}!`);
+// }
 
+//  -- 4 --
+//Напишіть цикл, який пропонує prompt ввести число більше за 100.
+//Якщо відвідувач введе менше число – попросити ввести ще раз, і так далі.
+//Цикл повинен запитувати число доти, доки відвідувач не введе число,
+// більше за 100, або не скасує ввід/введе порожній рядок.
 // while (true) {
-//   let value = +prompt("Введіть число");
+//   let value = +prompt('vvedit chyslo bilshe za 100');
+//   if (value > 100) break;
+//   alert(`vashe chyslo ${value} ne pidhode,vvedit bilshe`);
 //   if (!value) break;
-
-//   summ += value;
+//   console.log(value);
 // }
 
-// console.log("Summ", summ);
+//  -- 5 --
+// Вирахуйте середній вік
 
-// for (let i = 0; i < 10; i++) {
-//   if (i % 2 === 0) continue;
-//   console.log(i);
-// }
-
-// --------------------------//
-// --------------------------//
-// масиви
-// --------------------------//
-// --------------------------//
-
-// arr.push("Tomat");
-
-// console.log(arr);
-
-// arr.pop();
-
-// console.log(arr);
-
-// arr.shift();
-
-// console.log(arr);
-
-// arr.unshift("Tomat");
-
-// console.log(arr);
-
-// for (let i = 0; i < arr.length; i++) {
-//   console.log(arr[i]);
-// }
-
-// let arr = ['apple', 'orange', 'plum'];
-
-// for (let item of arr) {
-//   console.log(item);
-// }
-
-// for (let key in arr) {
-//   console.log(arr[key]);
-// }
-
-// let matrix = [
-//   [1, 2, 3],
-//   [4, 5, 6],
-//   [7, 8, 9],
-// ];
-// console.log(matrix[1][2]);
-
-// --------------------------//
-// --------------------------//
-// методи присвоєння
-// --------------------------//
-// --------------------------//
-
-// let a = 5;
-// let b = a;
-
-// a = 10;
-
-// console.log(a);
-// console.log(b);
-
-// let arr = [1, 2, 3];
-// let arr2 = arr;
-
-// arr.push(4);
-
-// console.log(arr2);
-
-// --------------------------//
-// --------------------------//
-// методи масиву
-// --------------------------//
-// --------------------------//
-
-// let arr = ['a', 'b', 'c', 'd', 'f'];
-
-// console.log(fruits.find(item => item.id === 0));
-
-// arr.splice(2, 2);
-
-// console.log(arr);
-
-// console.log(arr.slice(1, 3));
-
-// let a = [1, 2, 3];
-
-// console.log(arr.concat(a, "test"));
-
-// console.log(arr.indexOf("c", 1));
-
-// console.log(arr.lastIndexOf("c"));
-
-// console.log(arr.includes("c"));
-
-// const fruts = [
-//   { id: 0, name: 'Apple' },
-//   { id: 1, name: 'Tomat' },
-//   { id: 2, name: 'Cherry' },
-//   { id: 3, name: 'Orange' },
+// const girls = [
+//   { age: 23, name: 'Оля' },
+//   { age: 29, name: 'Аня' },
+//   { age: 10, name: 'Юля' },
+//   { age: 20, name: 'Катя' },
 // ];
 
-// console.log(fruts.find((item) => item.id === 1));
+// let sum = girls.reduce((total, item) => total + item.age, 0);
+// let average = sum / girls.length;
+// console.log(average);
 
-// console.log(fruts.filter((item) => item.id < 2));
-
-// map
-
-// let result = fruts.map((item) => item.name.length);
-// console.log(result);
-
-// let names = "Оля, Юля, Аня, Петя";
-
-// let arr = names.split(", ");
-
-// let newString = arr.join(", ");
-
-// let arr = [1, 2, 3, 4, 5];
-// let red = arr.reduce((summ, item) => summ + item);
-// console.log(red);
-
-// let arr = [22, 33, 26545, 21, 1];
-// let summ = arr.reduce((summ, item) => summ + item) / arr.length;
-// console.log(summ);
-
-// console.log(newString);
-
-// let value = arr.reduce(
-//   function (accumulator, item, index, array) {
-//     // ...
-//   },
-//   [initial]
-// );
-
-// let arr = [1, 2, 3, 4, 5];
-
-// let red = arr.reduce((summ, item) => summ + item);
-
-// console.log(red);
-
-// let arr = [23, 45, 30];
-
-// let summ = arr.reduce((sum, item) => sum + item) / arr.length;
-// console.log(summ);
